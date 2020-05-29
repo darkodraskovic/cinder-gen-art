@@ -1,5 +1,5 @@
 #!/bin/sh
 
-cd /media/darko/depot/Radovi/AppDev/Cinder/BasicApp/proj/cmake/build/
+cd proj/cmake/build/
 make
-./Debug/BasicApp/BasicApp
+./Release/BasicApp/BasicApp # ./Debug/BasicApp/BasicApp

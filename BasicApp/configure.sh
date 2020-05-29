@@ -1,9 +1,6 @@
 #!/bin/sh
 
-cd /media/darko/depot/Radovi/AppDev/Cinder/BasicApp/proj/cmake/
+cd proj/cmake/
 mkdir -p build
 cd build/
-cmake .. -DCMAKE_EXPORT_COMPILE_COMMANDS=1
-
-cd ../../../
-gtags --gtagslabel=ctags
+cmake .. -DCMAKE_EXPORT_COMPILE_COMMANDS=1 -DCMAKE_BUILD_TYPE=Release # -DCMAKE_BUILD_TYPE=Debug

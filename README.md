@@ -1,41 +1,27 @@
 # Cinder Generative Art
 
-Generative art made with
-[Cinder](https://libcinder.org/docs/guides/linux-notes/ubuntu.html).
+Generative art made with [Cinder](https://libcinder.org/docs/guides/linux-notes/ubuntu.html).
 
 ## Install
 
-Follow instruction found in [Ubuntu
-Notes](https://libcinder.org/docs/guides/linux-notes/ubuntu.html) to install
-Cinder.
+Follow instruction found in [Ubuntu Notes](https://libcinder.org/docs/guides/linux-notes/ubuntu.html) to install Cinder.
 
-Make a copy of `BasicApp` in the root folder. Rename `BasicApp` - in `MyApp` for
-example - and edit *MyApp/proj/cmake/CMakeLists.txt*. Refactor lines
-
-```
-project( BasicApp )
-
-get_filename_component( CINDER_PATH "/home/darko/Programs/Cinder/" ABSOLUTE )
-```
-
-to set the name of the project and `CINDER_PATH`.
-
-Replace all occurrences of `BasicApp` with `MyApp` in *MyApp/configure.sh* and
-*MyApp/compile.sh*. Set mode of `.sh` files to `775`.
+Make a copy of `BasicApp` in the root directory. `cd` to the copied directory and set mode of `.sh` files to `775`.
 
 ## Build & Run
 
-`cd` to `MyApp/proj/cmake` and run
+To build,
 
 ```
-mkdir build && cd build
-cmake .. -DCMAKE_EXPORT_COMPILE_COMMANDS=1
-make
-./Debug/MyApp/MyApp
+cd <app_directory> && ./configure.sh
 ```
 
-## Emacs
+To compile and run,
 
-Use `(irony-cdb-json-add-compile-commands-path PROJECT-ROOT
-COMPILE-COMMANDS-PATH)` to inform `irony-mode` about the project root and the
-location of `compile_commands.json` found in *MyApp/proj/cmake/build*
+```
+cd <app_directory> && ./compile.sh
+```
+
+## clangd
+
+To use clangd language server with a project read "Installing clangd" and "Project setup" chapters from official clangd [Getting started](https://clangd.llvm.org/installation.html) guide.

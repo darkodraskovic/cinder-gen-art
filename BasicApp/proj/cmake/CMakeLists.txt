@@ -3,7 +3,7 @@ set( CMAKE_VERBOSE_MAKEFILE ON )
 
 project( BasicApp )
 
-get_filename_component( CINDER_PATH "/home/darko/Programs/Cinder/" ABSOLUTE )
+get_filename_component( CINDER_PATH "/home/darko/Programs/Cinder" ABSOLUTE )
 get_filename_component( APP_PATH "${CMAKE_CURRENT_SOURCE_DIR}/../../" ABSOLUTE )
 
 include( "${CINDER_PATH}/proj/cmake/modules/cinderMakeApp.cmake" )
